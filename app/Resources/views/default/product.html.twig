@@ -1,0 +1,27 @@
+{#<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Id</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">{{product.id}}</p>
+    </div>
+    
+    <label class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">{{product.name}}</p>
+    </div>
+     
+      <label class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">{{product.description}}</p>
+    </div>
+  </div>
+</form>#}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for name in product %}
+<div>{{name.name}}</div>
+<div>  {{name.description}}</div>
+    {% endfor %}
+{% endblock %}
